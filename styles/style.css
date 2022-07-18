@@ -1,6 +1,27 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@500&display=swap');
 
+/* --------------------------header------------------------ */
+nav {
+    background-color: #562EFF;
+    /* width: 1440px; */
+    height: 94px;
+    width: 100%;
+}
+
+.header-idea {
+    font-size: 24px;
+    padding-top: 7px;
+    padding-left: 270px;
+}
+
+.header-manu {
+    display: flex;
+    justify-content: space-around;
+    padding-right: 70px;
+
+}
+
 /* common styles or utilities */
 body {
     font-family: 'Poppins', sans-serif;
@@ -95,4 +116,77 @@ hr {
     text-decoration: none;
     font-size: 16px;
     color: #562EFF;
+}
+
+/* ------------------------courses style---------------------- */
+.courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+}
+
+.courses .course-banner img {
+    width: 224px;
+    height: 104px;
+}
+
+.course-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fa-star {
+    font-size: 12px;
+}
+
+.fa-star.filled {
+    color: #FFC014;
+}
+
+.fa-star.empty {
+    color: #AEAEAE;
+}
+
+.course-duration {
+    background-color: #FEE5DF;
+    border-radius: 5px;
+}
+
+.fa-regular {
+    color: #ED6B4F;
+}
+
+/* -------------------------------Media Quries------------------------ */
+
+/* mobile Device */
+
+@media only screen and (max-width:688px) {
+    .container {
+        width: 100%;
+    }
+
+    .players,
+    .blogs,
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .player,
+    .blog {
+        flex-direction: column;
+    }
+
+}
+
+/* Tablet Devices */
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .container {
+        width: 100%;
+    }
+
+    .players,
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
